@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Test</title>
+
+<style type="text/css">
+
+body {
+    font-size: 12pt;
+    font-family: Calibri;
+    padding : 10px;
+}
+table {
+    border: 1px solid black;
+}
+th {
+    border: 1px solid black;
+    padding: 5px;
+    background-color:grey;
+    color: white;
+}
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+input {
+    font-size: 12pt;
+    font-family: Calibri;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<input type="button" id="btnExport"  value=" Export Table data into Excel " />
+<br/>
+<br/>
+<div id="dvData">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Nabil Manzoor</td>
+            <td>32</td>
+            <td>Rawalpindi</td>
+        </tr>
+        <tr>
+            <td>Raheel Farooq</td>
+            <td>42</td>
+            <td>Lahore</td>
+        </tr>
+        <tr>
+            <td>Imran Azhar</td>
+            <td>30</td>
+            <td>Dubai</td>
+        </tr>
+    </table>
+</div>
+
+<script src="jQuery/jQuery_2_1_3.js"></script>
+
+<script type="text/javascript">
+
+// this function is directly calling button that is why write script at the end so that he can find that control after the body tag
+// e.preventDefault(); // prevent default action of click event
+
+$("#btnExport").click(function (e) {
+    window.open('data:application/vnd.ms-excel,' + $('#dvData').html());
+    e.preventDefault();
+});
+
+</script>
+
+</body>
+
+</html>

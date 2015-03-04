@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML Table Sorting</title>
+</head>
+
+<body>
+<pre>
+<u>In HTML Template Binding</u>
+{{ orderBy_expression | orderBy : expression : reverse}}<br />
+<u>In JavaScript</u>
+$filter('orderBy')(array, expression, reverse)
+</pre>
+
+    <table border="1" width="500px">
+        <tr>
+            <th>Code</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>orderBy_expression</td>
+            <td>x in names (set in table row where data is to be displayed)</td>
+        </tr>
+        <tr>
+            <td>orderBy</td>
+            <td>orderBy</td>
+        </tr>
+        <tr>
+            <td>expression (HTML/JavaScript)</td>
+            <td>(1)orderByField e.g. orderByField='name' (set in table header)
+                (2) An expression can be optionally prefixed with + or - to control ascending or descending sort order (for example, +name or -name).
+                (3) You can initiate sorting in code like $scope.variableName = '-name'; Write only [variableName] where expression is to be used in table.
+            </td>
+        </tr>
+        <tr>
+            <td>reverse</td>
+            <td>reverseSort = !reverseSort (set in table header i.e. reverse the order of the array. ! means not and creates toggle effect)</td>
+        </tr>
+        <tr>
+            <td>array</td>
+            <td>The array to sort.</td>
+        </tr>
+        <tr>
+            <td>Source</td>
+            <td>(1) <a href="https://docs.angularjs.org/api/ng/filter/orderBy" target="_blank">docs.angularjs.org</a>
+            (2) <a href="http://hello-angularjs.appspot.com/sorttablecolumn" target="_blank">hello-angularjs.appspot.com</a></td>
+        </tr>
+    </table>
+
+    <br /> <br />
+
+    <div ng-app="" ng-init="names=[
+    {name:'Nabil',country:'Libya'},
+    {name:'Bilal',country:'Pakistan'},
+    {name:'Abdullah',country:'Australia'},
+    {name:'Raheel',country:'Saudi Arabia'}]">
+
+    <table border="1">
+        <tr>
+            <th>
+                <a href="" ng-click="orderByField='name'; reverseSort = !reverseSort">Name</a>
+            </th>
+            <th>
+                <a href="" ng-click="orderByField='country'; reverseSort = !reverseSort">Employees</a>
+            </th>
+        </tr>
+        <tr ng-repeat="x in names | orderBy:orderByField:reverseSort">
+            <td>{{x.name}}</td>
+            <td>{{x.country}}</td>
+        </tr>
+    </table>
+
+    <script src="Scripts/angular.min.js"></script>
+
+    </div>
+    
+</body>
+
+</html>

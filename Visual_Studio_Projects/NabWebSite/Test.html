@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test</title>
+
+
+    <script type="text/javascript">
+
+        function Test() {
+            document.forms[0].txt.value = "Value changed";
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+
+        <div>
+
+            <input type="text" id="txt" name="txt" />
+
+            <br />
+            <br />
+
+            <a href="http://www.ufone.com" onclick="Test();">Ufone</a>
+
+            <table border=0 cellpadding=0 cellspacing=1 bordercolor=black>
+                <tbody>
+                    <tr>
+                        <td>
+                            <b><u>Expense Detail</u></b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+                <table border=1 cellpadding=3 cellspacing=0 bordercolor=red>
+                    <tbody>
+                        <tr align='center'>
+                            <th><font color=black>#</font></th>
+                            <th><font color=black>Date</font></th>
+                            <th><font color=black>Expense Detail</font></th>
+                            <th><font color=black>Amount</font></th>
+                        </tr>
+                        <tr>
+                            <td><font color=black>1</font></td>
+                            <td><font color=black>05-Jan-2015</font></td>
+                            <td width='70%'><font color=black>Five</font></td>
+                            <td align=right><font color=black>500</font></td>
+                        </tr>
+                        <tr>
+                            <td><font color=black>2</font></td>
+                            <td><font color=black>06-Jan-2015</font></td>
+                            <td width='70%'><font color=black>Six</font></td>
+                            <td><font color=black>600</font></td>
+                        </tr>
+                        <tr>
+                            <td><font color=black>3</font></td>
+                            <td><font color=black>07-Jan-2015</font></td>
+                            <td width='70%'><font color=black>Seven</font></td>
+                            <td><font color=black>700</font></td>
+                        </tr>
+                        <tr>
+                            <td colspan='3'>
+                                <font color=black><b>Total</b></font>
+                            </td>
+                            <td>
+                                <font color=black><b>1,800</b></font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+
+    </form>
+
+</body>
+</html>
