@@ -32,16 +32,16 @@
 *.zip binary
 *.7z binary
 *.ttf binary
+*.DOC binary
+*.doc binary
+*.docx binary
+*.DOCX binary
  
 # Auto detect text files and perform LF normalization
 # http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
 * text=auto
  
 # Documents
-*.doc diff=astextplain
-*.DOC diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
 *.dot diff=astextplain
 *.DOT diff=astextplain
 *.pdf diff=astextplain
