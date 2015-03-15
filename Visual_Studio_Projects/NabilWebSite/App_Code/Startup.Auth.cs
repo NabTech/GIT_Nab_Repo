@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
 
-namespace NabWebSite
+namespace NabilWebSite
 {
     public partial class Startup {
 
@@ -34,11 +33,7 @@ namespace NabWebSite
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            //app.UseGoogleAuthentication();
         }
     }
 }

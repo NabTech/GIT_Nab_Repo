@@ -2,7 +2,7 @@
 using Microsoft.Owin.Security;
 using System;
 using System.Web;
-using NabWebSite;
+using NabilWebSite;
 
 public partial class Account_RegisterExternalLogin : System.Web.UI.Page
 {
@@ -96,8 +96,8 @@ public partial class Account_RegisterExternalLogin : System.Web.UI.Page
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                 return;
             }
+            AddErrors(result);
         }
-        AddErrors(result);
     }
 
     private void AddErrors(IdentityResult result)

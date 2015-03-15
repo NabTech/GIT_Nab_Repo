@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using NabWebSite;
+using NabilWebSite;
 
 public partial class Account_Manage : System.Web.UI.Page
 {
@@ -66,8 +66,6 @@ public partial class Account_Manage : System.Web.UI.Page
             IdentityResult result = manager.ChangePassword(User.Identity.GetUserId(), CurrentPassword.Text, NewPassword.Text);
             if (result.Succeeded)
             {
-                var user = manager.FindById(User.Identity.GetUserId());
-                IdentityHelper.SignIn(manager, user, isPersistent: false);
                 Response.Redirect("~/Account/Manage?m=ChangePwdSuccess");
             }
             else
@@ -107,13 +105,9 @@ public partial class Account_Manage : System.Web.UI.Page
     {
         UserManager manager = new UserManager();
         var result = manager.RemoveLogin(User.Identity.GetUserId(), new UserLoginInfo(loginProvider, providerKey));
-        string msg = String.Empty;
-        if (result.Succeeded)
-        {
-            var user = manager.FindById(User.Identity.GetUserId());
-            IdentityHelper.SignIn(manager, user, isPersistent: false);
-            msg = "?m=RemoveLoginSuccess";
-        }
+        var msg = result.Succeeded
+            ? "?m=RemoveLoginSuccess"
+            : String.Empty;
         Response.Redirect("~/Account/Manage" + msg);
     }
 
