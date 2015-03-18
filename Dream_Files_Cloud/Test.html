@@ -3,8 +3,33 @@
 <head>
 <meta charset="utf-8">
 <title>Test</title>
+
+<script src="jQuery/jQuery_2_1_3.js"></script>
+
+<script type="text/javascript">
+
+function change()
+{
+	//document.getElementById("txt").style.borderColor = "red";
+	//$("input").css("borderColor", "red");
+	$('input[id="txt"]').css("borderColor", "red");
+	
+}
+
+</script>
+
 </head>
 
 <body>
+
+<form>
+
+	<input type="button" value="Click" onClick="change()" />
+    
+	<input type="text" id="txt" name="txt" value="Nabil" />
+
+</form>
+
 </body>
+
 </html>
