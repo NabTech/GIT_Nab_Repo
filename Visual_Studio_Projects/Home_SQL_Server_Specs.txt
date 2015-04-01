@@ -1,6 +1,0 @@
-Microsoft SQL Server Management Studio	11.0.5058.0
-Microsoft Data Access Components (MDAC)	6.3.9600.17415
-Microsoft MSXML				3.0 6.0 
-Microsoft Internet Explorer		9.11.9600.17690
-Microsoft .NET Framework		4.0.30319.34209
-Operating System			6.3.9600
